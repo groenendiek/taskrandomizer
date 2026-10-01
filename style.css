@@ -47,11 +47,17 @@ a { color: var(--ok); }
 /* Vaste knoppen rechtsboven */
 .topbar {
   position: fixed;
-  top: calc(.6rem + env(safe-area-inset-top, 0px));
-  right: calc(.7rem + env(safe-area-inset-right, 0px));
+  top: .6rem;
+  right: .7rem;
   display: flex;
   gap: .45rem;
   z-index: 100;
+}
+@media (min-width: 480px) {
+  .topbar {
+    top: calc(.6rem + env(safe-area-inset-top, 0px));
+    right: calc(.7rem + env(safe-area-inset-right, 0px));
+  }
 }
 .round {
   display: inline-grid;
