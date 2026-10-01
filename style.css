@@ -238,22 +238,41 @@ table {
   border-collapse: collapse;
   table-layout: fixed;
   font-size: .95rem;
+col.c-task { width: 40%; }
+col.c-num  { width: 15%; }
+
+th, td {
+  padding: .45rem .4rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
 }
-col.c-task { width: 44%; }
-col.c-num  { width: 14%; }
-th, td { padding: .45rem .5rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
-th:first-child, td:first-child { overflow-wrap: anywhere; }
+
+/* Taaknaam: mag overal afbreken */
+th:first-child, td:first-child {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Tellers: rechts uitgelijnd, cijfers netjes onder elkaar */
 th + th, td + td {
   text-align: right;
   font-variant-numeric: tabular-nums;
-  white-space: nowrap;
 }
+
+/* Cijfers in de cellen mogen niet afbreken */
+td + td { white-space: nowrap; }
+
+/* Kolomkoppen mogen wél afbreken, en staan compacter */
 th {
   color: var(--muted);
   font-weight: 600;
-  font-size: .85rem;
+  font-size: .8rem;
   text-transform: uppercase;
   letter-spacing: .02em;
+  line-height: 1.2;
+  hyphens: auto;
+  white-space: normal;
 }
 tbody tr:last-child td { border-bottom: 0; }
 tbody tr:hover td { background: rgb(0 0 0 / .03); }
