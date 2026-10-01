@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f1f7e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16211a" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="images/hero.svg">
+<title>Taak Randomizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="main">
+
+<nav class="topbar" aria-label="Snelknoppen">
+  <button id="welcome-toggle" class="round" type="button" aria-label="Welkom" aria-expanded="true">ⓘ</button>
+  <a href="info.html" class="round" aria-label="Meer">⋯</a>
+</nav>
+
+<main>
+  <div class="hero" aria-hidden="true"></div>
+
+  <div id="welcome-wrap" class="welcome-wrap">
+    <div id="welcome" class="welcome">
+      <p>Taak Randomizer. Kies een takenlijst of laat me je verrassen.
+      Voeg een lijst toe, max. 9 lijsten totaal.
+      Alles wordt op jouw device opgeslagen, nergens anders.</p>
+    </div>
+  </div>
+
+  <section class="slip" aria-live="polite">
+    <p id="task" data-empty="Kies een lijst en laat het lot beslissen.">Kies een lijst en laat het lot beslissen.</p>
+    <div id="acts" class="acts" hidden>
+      <button id="done" class="act ok" type="button">
+        <span class="icon" aria-hidden="true">✓</span>
+        <span class="label">Gedaan</span>
+      </button>
+      <button id="remove" class="act no" type="button">
+        <span class="icon" aria-hidden="true">✕</span>
+        <span class="label">Verwijderen</span>
+      </button>
+    </div>
+    <p id="confirm-msg" class="sr-only" role="status" aria-live="polite"></p>
+  </section>
+
+  <div id="grid" class="grid"></div>
+  <button id="surprise" class="wide" type="button">Verras me</button>
+
+  <section id="panel" class="panel"><div>
+    <label class="field">Naam van de lijst <input id="name" autocomplete="off"></label>
+    <p id="count" class="note"></p>
+    <textarea id="box" rows="10" placeholder="Eén taak per regel. Plakken uit een notitie of van een AI mag; opsommingstekens worden weggehaald."></textarea>
+    <div class="row">
+      <button id="save" class="primary" type="button">Klaar</button>
+      <button id="share" type="button">Delen</button>
+      <button id="copy" type="button">Kopieer</button>
+      <button id="dl" type="button">Download</button>
+      <label class="btn">Uit bestand<input id="file" type="file" accept=".txt,text/plain" hidden></label>
+    </div>
+    <div class="row row-danger">
+      <button id="del" class="danger" type="button">
+        <span class="label" data-default="Verwijder lijst" data-confirm="Lijst wordt verwijderd. Ok?">Verwijder lijst</span>
+      </button>
+    </div>
+    <p id="msg" class="note" role="status"></p>
+  </div></section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

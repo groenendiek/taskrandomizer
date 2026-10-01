@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f1f7e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16211a" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="images/hero.svg">
+<title>Meer info - Taak Randomizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="info">
+
+<nav class="topbar" aria-label="Snelknoppen">
+  <a href="index.html" class="round" aria-label="Terug naar de app">←</a>
+</nav>
+
+<main>
+  <h1>Meer info</h1>
+
+  <h2>Wat er uit je lijsten kwam</h2>
+  <div id="lists"></div>
+  <p class="note">Gedaan: met de groene knop afgevinkt, de taak blijft in de lijst. Doorgeklikt: binnen ongeveer 45 seconden opnieuw gekozen. Een aangepaste taak telt als een verwijderde en een nieuwe taak. Dit zijn tellers, geen tijdlijn: er wordt niet bewaard wanneer iets gebeurde.</p>
+  <div class="row">
+    <button id="hexp" type="button">Exporteer geschiedenis</button>
+    <label class="btn">Importeer geschiedenis<input id="himp" type="file" accept=".json,application/json" hidden></label>
+    <button id="hprune" type="button">Ruim oude taken op</button>
+  </div>
+  <p id="msg" class="note" role="status"></p>
+
+  <h2>Waar je gegevens blijven</h2>
+  <p>Je lijsten, de wachttijden en de tellers staan alleen in de browser van dit toestel. Er is geen account, geen server voor je gegevens en geen analyse; niets wordt naar de maker gestuurd. Wis je je browsergegevens, dan verdwijnt alles. Op een ander toestel begin je opnieuw: neem een lijst mee met Delen, Kopieer of Download op het bewerkscherm. De hostingdienst van deze site kan zelf toegangslogs bijhouden.</p>
+
+  <h2>Steun de maker</h2>
+  <p>Deze pagina is gratis. Wie wil, kan iets geven via PayPal. Je verlaat dan deze site en valt onder het beleid van PayPal.</p>
+  <div class="row">
+    <a class="btn" href="https://www.paypal.me/JOUWNAAM/3EUR">€3</a>
+    <a class="btn" href="https://www.paypal.me/JOUWNAAM/5EUR">€5</a>
+    <a class="btn" href="https://www.paypal.me/JOUWNAAM/10EUR">€10</a>
+    <a class="btn" href="https://www.paypal.me/JOUWNAAM">Zelf kiezen</a>
+  </div>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:naam@voorbeeld.be">naam@voorbeeld.be</a></p>
+
+  <p class="note back-hint">Klik op <strong>←</strong> linksboven om terug te gaan.</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
